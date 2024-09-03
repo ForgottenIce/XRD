@@ -11,5 +11,11 @@ What problems can XR solve?
 ## What
 Insert what
 
-## Why
-Insert why
+## Why use XR technology?
+There are many benefits of using XR. Since you are present in the virtual or augmented reality, it opens up a lot more possibilities of how you can interact with the environment compared to traditional means.
+
+An example that we covered in the first lesson was reloading a weapon in a video game. On PC or console, this would typically be as simple as pressing a button. XR opens up the possibility of actually reloading the weapon with motions that are very similar to how you would reload a weapon in real life.
+
+XR is not only useful for video games, but also for real activities such as training, education, assistance, socializing and more.
+
+A real use case that we covered in the first lesson was using XR to create a training facility for operating the various machines in a restaurant. New employees can access this training facility through a VR headset and interact with the various machines as if they were physically there, but without disturbing the already busy restaurant. Instead of having people give instructions, the VR experience itself provides the instructions. This saves time and money compared to traditional training, and the new employees can mess up risk free in the virtual environment.
