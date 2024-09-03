@@ -26,9 +26,8 @@ A real use case that we covered in the first lesson was using XR to create a tra
 
 ## XR Use Cases
 Other than the already mentioned use cases, here are some other use cases for XR:
-- Immersive Gaming: VR and AR games offer highly immersive experiences where users can interact with digital environments as if they were real.
-- Virtual Cinemas & Concerts: Users can attend virtual screenings, live performances, or concerts without leaving their homes, creating immersive social experiences.
-- Interactive Storytelling: XR enables users to engage with narratives in ways traditional media cannot, by immersing them directly in the story.
-
-- Simulations for Medical Training: Surgeons, doctors, and medical students can practice procedures in realistic 3D environments without risks to patients.
-- Technical & Industrial Training: Workers in fields like manufacturing and construction can learn and practice using complex machinery or performing hazardous tasks in a safe virtual environment.
+- **Immersive Gaming:** VR and AR games offer highly immersive experiences where users can interact with digital environments as if they were real.
+- **Virtual Cinemas** & Concerts: Users can attend virtual screenings, live performances, or concerts without leaving their homes, creating immersive social experiences.
+- **Interactive Storytelling:** XR enables users to engage with narratives in ways traditional media cannot, by immersing them directly in the story.
+- **Simulations for Medical Training:** Surgeons, doctors, and medical students can practice procedures in realistic 3D environments without risks to patients.
+- **Technical & Industrial Training:** Workers in fields like manufacturing and construction can learn and practice using complex machinery or performing hazardous tasks in a safe virtual environment.
