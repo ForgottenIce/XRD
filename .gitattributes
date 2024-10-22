@@ -1,3 +1,4 @@
 *.blend filter=lfs diff=lfs merge=lfs -text
 AR/Blender/3D[[:space:]]Scans/*.fbx filter=lfs diff=lfs merge=lfs -text
 AR/Blender/Models/*.fbx filter=lfs diff=lfs merge=lfs -text
+AR/AR-Project/Assets/3dModels/*.fbx filter=lfs diff=lfs merge=lfs -text
