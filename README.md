@@ -4,8 +4,6 @@ Welcome to our **XR Development** project! This Repository facilitates all proje
 ## Augmented Reality
 This section contains source code, documentation, and blog posts related to the AR portion of the project.
 
-- **[Augmented Reality](Ar/AR-Project/):** Containes the project for Augmented Reality.
-
 ## Virtual Reality
 This section includes source code, documentation, and blog posts for the VR part of the project.
 
