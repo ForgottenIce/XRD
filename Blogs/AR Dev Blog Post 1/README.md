@@ -11,9 +11,23 @@ The app will then guide the user in the direction of their car.
 We have chosen to focus on the VIA parking lot for our project.
 
 ## The approach
-/* Write about the process/methods/technologies we're intending to use to create the app. */
+To bring our AR parking assistant to life, we plan to leverage a combination of technologies, tools, and methodologies that will enable us to build an effective and interactive solution. Below is an outline of the key components and processes involved in the development of the app:
 
-/* Write about the idea of overlaying a 3D model of the parking lot into the real world. */
+**1. Unity Game Engine**
+We will use **Unity**, a widely-used game engine for creating 3D and AR applications. Unity offers built-in support for AR and provides tools for manipulation 3D models, applying textures, and rendering in real-time.
+
+**2. AR Foundation**
+For augmented reality featues, we'll use **AR Foundation**, Unity's framework for developing AR apps across **ARKit** (iOS) and **ARCore** (Android). AR Foundation will allow us to access device cameras, detect surfaces, and overlay virtual objects in the real-world enviorment.
+
+**3. 3D Model of the Parking Lot**
+A critical component of the app is a **3D model of the VIA parking lot**. This model, created using **Blender**, will be scaled and imported into Unity to serve as the app's virtual environment. The 3D model well help users identify the layout and spot their car.
+
+**4. User Interface (UI) and Input Handling**
+The app will feature a **simple and intuitive UI** for users to input their parking spot number. Upon return, users can open the app and follow AR overlays guiding them to their car. **Unity's UI Toolkit** and **AR Foundation** will enable effective touch input and UI handling.
+
+**5. Testing and Iteration**
+We will conduct **testing** throughout development on Android, ensuring the app functions as expected in different lighting and environmental conditions. Testing will help verify that the 3D model aligns well with the real parking environment.
+
 In our AR project, the idea of overlaying a 3D model of the parking lot into the real world serves as the foundation for providing a seamless and intuitive user experience. By integrating a virtual 3D model of the VIA parking lot into the real-world environment through augmented reality, users can visualize the parking layout directly on their device. The digital overlay will enhance awareness and make it easier for users to navigate.
 
 
