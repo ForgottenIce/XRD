@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedImageManager: {fileID: 237294072}
-  parckingAreaPrefab: {fileID: 153859821005710448, guid: de3941a71654a3548964bd1f6cad6771,
+  parckingAreaPrefab: {fileID: 1632428278841744488, guid: 6c363a6d13df3a747b5c290c4a4a4a08,
     type: 3}
 --- !u!4 &792504898
 Transform:

@@ -23,6 +23,9 @@ public class ParkingAreaSpawner : MonoBehaviour
         {
             var theParckingArea = Instantiate(parckingAreaPrefab);
             theParckingArea.transform.SetParent(eventArgs.added.FirstOrDefault()?.transform, false);
+            //theParckingArea.transform.Rotate(new Vector3(((1f / 3f) * 100f) + 1f, -90, -90));
+            theParckingArea.transform.localRotation = Quaternion.Euler(new Vector3(((1f/3f)*100f)+1f,-90,-90));
+            //theParckingArea.transform.LookAt(theParckingArea.transform.position - Vector3.right);
         }
     }
 }

@@ -18,12 +18,12 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5040787100674286367
-      m_GuidHigh: 13991969318036572553
+      m_GuidLow: 4715195380647617734
+      m_GuidHigh: 8099781778588782015
     m_SerializedTextureGuid:
-      m_GuidLow: 12674397391288575770
-      m_GuidHigh: 1398437417234116571
-    m_Size: {x: 0.2, y: 0.20097908}
+      m_GuidLow: 14971323208630111984
+      m_GuidHigh: 7325017036923244826
+    m_Size: {x: 0.7, y: 0.9059578}
     m_SpecifySize: 1
-    m_Name: IMG_20241001_153910980
-    m_Texture: {fileID: 2800000, guid: 89e4a71a8146afe4dbafdaf66b3f6813, type: 3}
+    m_Name: parkingSign
+    m_Texture: {fileID: 0}

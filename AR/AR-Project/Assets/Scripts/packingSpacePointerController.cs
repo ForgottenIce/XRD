@@ -25,7 +25,7 @@ public class packingSpacePointerController : MonoBehaviour
 
     private IEnumerator GetCylinder() {
         yield return new WaitForEndOfFrame();
-        parckingArea = XROrigin.GetNamedChild("Cylinder");
+        parckingArea = XROrigin.GetNamedChild("SpotPointer");
     }
 
     // Update is called once per frame
