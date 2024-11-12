@@ -9,14 +9,12 @@ public class packingSpacePointerController : MonoBehaviour
 
     [SerializeField] GameObject XROrigin;
     [SerializeField] GameObject pointer;
+    [SerializeField] TMP_InputField inputField;
     private GameObject parckingArea;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        var obj = GameObject.Find("ParkingSpaceInput");
-        if (obj != null) {
-            obj.GetComponent<TMP_InputField>().onValueChanged.AddListener(SearchForParkingSpace);
-        }
+        inputField.onValueChanged.AddListener(SearchForParkingSpace);
     }
 
     private void SearchForParkingSpace(string arg0) {
