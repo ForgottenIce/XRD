@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e847d449f23654694b7ab10b381f0c, type: 3}
+  m_Name: New Maze Cell Dic
+  m_EditorClassIdentifier: 
+  m_MazeCells:
+  - Key: 0
+    Value: {fileID: 5995666585679111083, guid: 4ade702fc3d123b4c9779066ea75fee4, type: 3}
+  - Key: 2
+    Value: {fileID: 7846434011094656117, guid: 47b0439ce453c944189d4f19a74c37fa, type: 3}
+  - Key: 1
+    Value: {fileID: 7725392595462045193, guid: 16fab4dc0402ea441a54b835972f8693, type: 3}
+  - Key: 3
+    Value: {fileID: 2294560285059387393, guid: 47bc657fb946429468e41afe64721d2d, type: 3}
+  - Key: 4
+    Value: {fileID: 1563346064001053333, guid: ce874592d8d4fd645a7f546e45e84654, type: 3}
+  - Key: 5
+    Value: {fileID: 6287353121022523378, guid: fcf7a475bfd236d4081199e0a18c91f8, type: 3}

@@ -3,12 +3,7 @@ guid: 28891f05700c5f042ac6a43fbcb281e3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MinecraftBlockMaterial
-    second: {fileID: 2100000, guid: bba94adc614e14c4ca3e8308467a50aa, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 0
     materialName: 0
