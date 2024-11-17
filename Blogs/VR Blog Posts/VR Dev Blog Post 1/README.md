@@ -1,5 +1,5 @@
 # VR Dev Blog Post 1
-**Authors**: Sebastian Ørndrup
+**Authors**: Sebastian Ørndrup, Anders Hellesøe
 
 ### Overview
 The core of our project is a **VR Maze Game** where the player must escape from a twisting, complex labyrinth. But there's a catch - the player isn't alone. Inspired by the terrifying *Warden* character from *Minecraft*, a relentless creature roams the maze, determined to hunt down the player. The player's mission is simple yet challenging: **avoid the Warden and find the way out before being caught**.
