@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WanderController : MonoBehaviour
 {
+    [Header("Grid fields")]
     [SerializeField] private MazeSpawner m_Spawner;
     [SerializeField] private Grid m_Grid;
     private Stack<Vector2Int> path = new();
@@ -11,12 +12,45 @@ public class WanderController : MonoBehaviour
     private Vector3 nextdis;
     [SerializeField] private float gridTargetPrecision;
 
+    [Header("Movement Variables")]
     [SerializeField] private float speed;
     [SerializeField] private float turnSpeed;
+
+    [Header("Sound Fields")]
+    [SerializeField] private SoundEventEmitter SoundEventEmitter;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SoundEventEmitter.OnSoundEvent += HandleSoundEvent;
+    }
+
+    private void HandleSoundEvent(SoundEvent @event) {
+        var rounded = Vector3Int.RoundToInt(@event.eventPosition);
+        var pos = m_Grid.WorldToCell(rounded+Vector3Int.one);
+        if (m_Spawner.maze[pos.x][pos.z] != 1) {
+            SetPath(pos.x, pos.z);
+            return;
+        }
+
+        var spaceModifierXTest = pos.x + (((rounded.x + 1) % 3) - 1);
+        var spaceModifierZTest = pos.z + (((rounded.z + 1) % 3) - 1);
+
+        var spaceModifierX = 0; 
+        var spaceModifierZ = 0;
+        if (m_Spawner.maze[spaceModifierXTest][spaceModifierZTest] != 1) {
+            spaceModifierX = ((rounded.x + 1) % 3) - 1;
+            spaceModifierZ = ((rounded.z + 1) % 3) - 1;
+        }
+        if (m_Spawner.maze[spaceModifierXTest][pos.z] != 1) {
+            spaceModifierX = ((rounded.x + 1) % 3) - 1;
+        }
+        if (m_Spawner.maze[pos.x][spaceModifierZTest] != 1) {
+            spaceModifierZ = ((rounded.z + 1) % 3) - 1;
+        }
+
+        SetPath(pos.x + spaceModifierX, pos.z + spaceModifierZ);
     }
 
     // Update is called once per frame
@@ -57,6 +91,7 @@ public class WanderController : MonoBehaviour
     }
 
     private void SetPath(int x, int y) {
+        path.Clear();
         var pos = m_Grid.WorldToCell(Vector3Int.RoundToInt(gameObject.transform.position)+Vector3Int.one);
         var m = m_Spawner.maze;
 

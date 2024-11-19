@@ -55,10 +55,12 @@ public class AStar
             for (int k = 0; k < 4; k++) {
                 int testRow = i + row[k];
                 int testCol = j + col[k];
-                if ((maze[testRow][testCol] != -1) && !visited[testRow][testCol]) { // TODO there are array out of bounds here why?
-                    visited[testRow][testCol] = true;
-                    queue.Add(new Node(testRow, testCol, distance + (int)Math.Pow(maze[testRow][testCol]+1,10), goal, node));
-                }
+                try {
+                    if ((maze[testRow][testCol] != -1) && !visited[testRow][testCol]) { // TODO there are array out of bounds here why?
+                        visited[testRow][testCol] = true;
+                        queue.Add(new Node(testRow, testCol, distance + (int)Math.Pow(maze[testRow][testCol]+1,10), goal, node));
+                    }
+                } catch (Exception) { }
             }
             queue.Sort();
         }

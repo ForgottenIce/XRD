@@ -9,6 +9,7 @@ public class DrawGridSpace : MonoBehaviour
 
     [SerializeField] Vector3Int[] spaces;
     [SerializeField] Vector3Int specificSpace;
+    [SerializeField] Vector3 specificSpaceFloat;
 
     void Start() {
     }
@@ -25,7 +26,14 @@ public class DrawGridSpace : MonoBehaviour
         }
         Gizmos.color = Color.blue;
         Gizmos.DrawCube(specificSpace * 3, Vector3.one * 3);
-        
+        var spaceFloat = Vector3Int.RoundToInt(gameObject.transform.position);
+        if (specificSpaceFloat != null && m_Spawner.maze != null) {
+            Gizmos.color = Color.cyan;
+            var spaceModifierX = ((spaceFloat.x + 1) % 3) - 1;
+            var spaceModifierZ = ((spaceFloat.z + 1) % 3) - 1;
+            Gizmos.DrawCube(grid.CellToWorld(grid.WorldToCell(spaceFloat+Vector3.one) + new Vector3Int(spaceModifierX,0, spaceModifierZ)), Vector3.one * 3);
+        }
+
         if (grid != null && m_Spawner != null && m_Spawner.maze != null) {
             var gridSpace = grid.WorldToCell(Vector3Int.RoundToInt(transform.position) + Vector3Int.one);
             for (int i = Math.Max(gridSpace.x - windowRadius + 1, 0); i < Math.Min(gridSpace.x + windowRadius,m_Spawner.maze.Length); i++) {
