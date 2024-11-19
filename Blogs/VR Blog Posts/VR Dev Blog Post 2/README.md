@@ -1,4 +1,4 @@
-# VR Dev Blog Post 1
+# VR Dev Blog Post 2
 **Authors**: Anders Hellesøe
 
 ### Maze meta data
