@@ -1,6 +1,6 @@
 using UnityEngine;
 
-struct SoundEvent
+public struct SoundEvent
 {
     public Vector3 eventPosition;
 

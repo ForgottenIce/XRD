@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Maze/SoundEventEmitter")]
-class SoundEventEmitter : ScriptableObject
+public class SoundEventEmitter : ScriptableObject
 {
     public event Action<SoundEvent> OnSoundEvent;
 
