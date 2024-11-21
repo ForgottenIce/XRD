@@ -3,7 +3,47 @@ guid: e274c07adad486946b5193988f8e03d3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: deepslate_bricks
+    second: {fileID: 2800000, guid: 902198261e2fa3b4fbd588f1c23ccbea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: deepslate_tiles
+    second: {fileID: 2800000, guid: d03eebebb632f4f449c408fc6f6062bc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dirt
+    second: {fileID: 2800000, guid: 2f4366f940d8f9145a8b73b3b64fca3c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: grass_block_side_y
+    second: {fileID: 2800000, guid: 445445e50e78d084e9172c465b108116, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: grass_block_top_y
+    second: {fileID: 2800000, guid: 70ddff907ed5b3949a6a929d6e6de3ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: iron_door_bottom
+    second: {fileID: 2800000, guid: e73800d7eabe08d48aa2d2925412702d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: iron_door_top
+    second: {fileID: 2800000, guid: e3588fc09bf4eaf4180539310cfc3c17, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: polished_deepslate
+    second: {fileID: 2800000, guid: c4fb2b3afb5088645abc754a8f26cb25, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
