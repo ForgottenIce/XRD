@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4ddb2c4bf459fa3459d10e1e1345981d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: bba94adc614e14c4ca3e8308467a50aa, type: 2}
+      objectReference: {fileID: 2100000, guid: f41db806e9dfb9846b9e214cd0dbc1ab, type: 2}
     - target: {fileID: 919132149155446097, guid: 4ddb2c4bf459fa3459d10e1e1345981d, type: 3}
       propertyPath: m_Name
       value: BlockStraightEnd
