@@ -5,7 +5,8 @@ using UnityEngine;
 public class WanderController : MonoBehaviour
 {
     [Header("Grid fields")]
-    [SerializeField] private MazeSpawner m_Spawner;
+    //[SerializeField] private MazeSpawner m_Spawner;
+    [SerializeField] public int[][] maze { set; get; }
     [SerializeField] private Grid m_Grid;
     private Stack<Vector2Int> path = new();
 
@@ -29,8 +30,9 @@ public class WanderController : MonoBehaviour
     private void HandleSoundEvent(SoundEvent @event) {
         var rounded = Vector3Int.RoundToInt(@event.eventPosition);
         var pos = m_Grid.WorldToCell(rounded+Vector3Int.one);
-        if (m_Spawner.maze[pos.x][pos.z] != 1) {
-            SetPath(pos.x, pos.z);
+        //if (m_Spawner.maze[pos.x][pos.z] != 1) {
+        if (maze[pos.x][pos.z] != 1) {
+                SetPath(pos.x, pos.z);
             return;
         }
 
@@ -39,14 +41,17 @@ public class WanderController : MonoBehaviour
 
         var spaceModifierX = 0; 
         var spaceModifierZ = 0;
-        if (m_Spawner.maze[spaceModifierXTest][spaceModifierZTest] != 1) {
-            spaceModifierX = ((rounded.x + 1) % 3) - 1;
+        //if (m_Spawner.maze[spaceModifierXTest][spaceModifierZTest] != 1) {
+        if (maze[spaceModifierXTest][spaceModifierZTest] != 1) {
+                spaceModifierX = ((rounded.x + 1) % 3) - 1;
             spaceModifierZ = ((rounded.z + 1) % 3) - 1;
         }
-        if (m_Spawner.maze[spaceModifierXTest][pos.z] != 1) {
+        //if (m_Spawner.maze[spaceModifierXTest][pos.z] != 1) {
+        if (maze[spaceModifierXTest][pos.z] != 1) {
             spaceModifierX = ((rounded.x + 1) % 3) - 1;
         }
-        if (m_Spawner.maze[pos.x][spaceModifierZTest] != 1) {
+        //if (m_Spawner.maze[pos.x][spaceModifierZTest] != 1) {
+        if (maze[pos.x][spaceModifierZTest] != 1) {
             spaceModifierZ = ((rounded.z + 1) % 3) - 1;
         }
 
@@ -57,8 +62,10 @@ public class WanderController : MonoBehaviour
     void Update()
     {
         if (path.Count <= 0) {
-            var x = Random.Range(0, m_Spawner.maze.Length - 1);
-            var y = Random.Range(0, m_Spawner.maze[0].Length - 1);
+            //var x = Random.Range(0, m_Spawner.maze.Length - 1);
+            var x = Random.Range(0, maze.Length - 1);
+            //var y = Random.Range(0, m_Spawner.maze[0].Length - 1);
+            var y = Random.Range(0, maze[0].Length - 1);
             SetPath(x, y);
         }
 
@@ -93,7 +100,8 @@ public class WanderController : MonoBehaviour
     private void SetPath(int x, int y) {
         path.Clear();
         var pos = m_Grid.WorldToCell(Vector3Int.RoundToInt(gameObject.transform.position)+Vector3Int.one);
-        var m = m_Spawner.maze;
+        //var m = m_Spawner.maze;
+        var m = maze;
 
         var disNode = AStar.ShortestPath(m, new int[] { pos.x, pos.z }, new int[] { x, y });
         Debug.Log(disNode.distance);

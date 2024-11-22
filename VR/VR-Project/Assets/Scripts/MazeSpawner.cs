@@ -6,16 +6,16 @@ public class MazeSpawner : MonoBehaviour
     [SerializeField] private Grid Grid;
     [SerializeField] private GameObject Spawner;
     [SerializeField] private MazeCellDic cellDic;
-    public int[][] maze;
+    //public int[][] maze;
     [SerializeField] private Vector3 testpoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        TypedSpawnMaze();
+        //var maze = WilsonsAlgorithm.WilsonsMaze(20, 20);
+        //TypedSpawnMaze(maze);
     }
 
-    void TypedSpawnMaze() {
-        maze = WilsonsAlgorithm.WilsonsMaze(20, 20);
+    public void TypedSpawnMaze(int[][] maze) {
         var typedMaze = WilsonsAlgorithm.MetaStructMaze(maze);
         for (int i = 0; i < maze.Length; i++) {
             for (int j = 0; j < maze[i].Length; j++) {
@@ -49,15 +49,15 @@ public class MazeSpawner : MonoBehaviour
     }
 
     void OnDrawGizmosSelected() {
-        Gizmos.color = Color.yellow;
-        for (int i = 0; i < maze.Length; i++) {
-            for (int j = 0; j < maze[i].Length; j++) {
-                Gizmos.DrawCube(Grid.CellToWorld(new Vector3Int(i,0,j)),Vector3.one*3);
-            }
-        }
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawCube(Grid.WorldToCell(testpoint),Vector3.one*3);
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawSphere(testpoint,2f);
+        //Gizmos.color = Color.yellow;
+        //for (int i = 0; i < maze.Length; i++) {
+        //    for (int j = 0; j < maze[i].Length; j++) {
+        //        Gizmos.DrawCube(Grid.CellToWorld(new Vector3Int(i,0,j)),Vector3.one*3);
+        //    }
+        //}
+        //Gizmos.color = Color.cyan;
+        //Gizmos.DrawCube(Grid.WorldToCell(testpoint),Vector3.one*3);
+        //Gizmos.color = Color.magenta;
+        //Gizmos.DrawSphere(testpoint,2f);
     }
 }
