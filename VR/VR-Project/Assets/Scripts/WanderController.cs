@@ -22,6 +22,10 @@ public class WanderController : MonoBehaviour
 
     [Header("Sound Fields")]
     [SerializeField] private SoundEventEmitter SoundEventEmitter;
+    
+    [Header("Warden Model")]
+    [SerializeField] private Animation wardenAnimation;
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,6 +37,7 @@ public class WanderController : MonoBehaviour
     private void HandleSoundEvent(SoundEvent @event) {
         if (maze == null) { return; }
         StopCoroutine("SniffForTarget");
+        ChangeAnimation("wardenrun.custom");
         WardenIsSniffing = false;
         speed = 2;
         turnSpeed = 2;
@@ -138,13 +143,20 @@ public class WanderController : MonoBehaviour
     }
 
     public IEnumerator SniffForTarget() {
+        ChangeAnimation("wardenscream.custom");
         yield return new WaitForSeconds(5);
+        ChangeAnimation("wardenwalk.custom");
         WardenIsSniffing = false;
         var x = Random.Range(0, maze.Length - 1);
         var y = Random.Range(0, maze[0].Length - 1);
         SetPath(x, y);
         speed = 1;
         turnSpeed = 1;
+    }
+
+    private void ChangeAnimation(string animationName)
+    {
+        wardenAnimation.Play(animationName);
     }
 
     void OnDrawGizmosSelected() {
