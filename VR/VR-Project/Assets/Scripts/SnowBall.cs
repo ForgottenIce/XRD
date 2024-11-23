@@ -5,13 +5,19 @@ public class SnowBall : MonoBehaviour
 {
     
     [SerializeField] private SoundEventEmitter soundEventEmitter;
+    
+    private bool isAlive = true;
    
     private void OnCollisionEnter(Collision other)
     {
-        soundEventEmitter.EmitSoundEvent(new SoundEvent(transform.position));
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
-        gameObject.GetComponent<AudioSource>().Play();
-        StartCoroutine(DelayedDestroy());
+        if (isAlive)
+        {
+            soundEventEmitter.EmitSoundEvent(new SoundEvent(transform.position));
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<AudioSource>().Play();
+            isAlive = false;
+            StartCoroutine(DelayedDestroy());
+        }
     }
     
     private IEnumerator DelayedDestroy()
