@@ -21,6 +21,11 @@ public class SettingsHandler : MonoBehaviour
     }
 
     public void HandleButtonPress(string buttonKey) {
+        if (mazeHasGenerated)
+        {
+            Debug.Log("maze already exists");
+            return;
+        }
         switch (buttonKey) {
             case "sizeUp": 
                 if (mazeSize >= mazeSizeMax) { break; }
