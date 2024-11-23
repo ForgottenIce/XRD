@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class WanderController : MonoBehaviour
@@ -25,9 +26,19 @@ public class WanderController : MonoBehaviour
     
     [Header("Warden Model")]
     [SerializeField] private Animation wardenAnimation;
-    
 
+    [Header("Player Targeting")]
+    private bool ChargingPlayer = false;
+    [SerializeField] private Transform player;
+    [SerializeField] private float detectionRadius = 1;
+    [SerializeField] private DetectionMethod detectionMethod;
+    [SerializeField] private float GracePeriode;
+    [SerializeField] private float DetectionChangePercent;
 
+    enum DetectionMethod {
+        StillInRangeAfterTime,
+        RandomChange
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -77,9 +88,18 @@ public class WanderController : MonoBehaviour
     {
         if (!WardenIsActive) { return; }
 
-        if (!WardenIsSniffing && path.Count <= 0) {
+        if (!WardenIsSniffing && !ChargingPlayer && path.Count <= 0) {
             WardenIsSniffing = true;
             StartCoroutine("SniffForTarget");
+        }
+
+        if (!ChargingPlayer && ((player.position+Vector3.up)-transform.position).magnitude < detectionRadius) {
+            StartCoroutine("ChargePlayer");
+        }
+        if ((nextdis - transform.position).magnitude < 0.5f 
+            || ((player.position + Vector3.up) - transform.position).magnitude > detectionRadius 
+            && Physics.Linecast(transform.position, player.position + Vector3.up, out _, LayerMask.GetMask("Default"))) {
+            ChargingPlayer = false;
         }
 
         if (WardenIsSniffing && path.Count <= 0) { return; }
@@ -91,9 +111,10 @@ public class WanderController : MonoBehaviour
         //    var y = Random.Range(0, maze[0].Length - 1);
         //    SetPath(x, y);
         //}
-
-        nextdis = m_Grid.CellToWorld(Vector3Int.RoundToInt(new Vector3(path.Peek().x, 0, path.Peek().y)));
-        nextdis.y = 1;
+        if (!ChargingPlayer && path.Count > 0) {
+            nextdis = m_Grid.CellToWorld(Vector3Int.RoundToInt(new Vector3(path.Peek().x, 0, path.Peek().y)));
+            nextdis.y = 1;
+        }
 
         transform.position = transform.position + (speed * Time.deltaTime
             * ((nextdis - transform.position).normalized).normalized);
@@ -106,7 +127,7 @@ public class WanderController : MonoBehaviour
         }
 
 
-        if ((nextdis - transform.position).sqrMagnitude <= gridTargetPrecision) {
+        if (!ChargingPlayer && path.Count > 0 && (nextdis - transform.position).sqrMagnitude <= gridTargetPrecision) {
             path.Pop();
         }
     }
@@ -154,6 +175,34 @@ public class WanderController : MonoBehaviour
         turnSpeed = 1;
     }
 
+    private IEnumerator ChargePlayer() {
+        if (!Physics.Linecast(transform.position, player.position + Vector3.up, out _, LayerMask.GetMask("Default"))) {
+            if (detectionMethod == DetectionMethod.RandomChange && Random.value>DetectionChangePercent) {
+                ChargingPlayer = true;
+                var target = player.position;
+                target.y = 1;
+                nextdis = target;
+                ChangeAnimation("wardenrun.custom");
+                speed = 2;
+                turnSpeed = 2;
+                path.Clear();
+            }
+            else if (detectionMethod == DetectionMethod.StillInRangeAfterTime) {
+                yield return new WaitForSeconds(GracePeriode);
+                if (!Physics.Linecast(transform.position, player.position + Vector3.up, out _, LayerMask.GetMask("Default"))) {
+                    ChargingPlayer = true;
+                    var target = player.position;
+                    target.y = 1;
+                    nextdis = target;
+                    ChangeAnimation("wardenrun.custom");
+                    speed = 2;
+                    turnSpeed = 2;
+                    path.Clear();
+                }
+            }
+        } 
+    }
+
     private void ChangeAnimation(string animationName)
     {
         wardenAnimation.Play(animationName);
@@ -167,6 +216,8 @@ public class WanderController : MonoBehaviour
             Gizmos.color = Color.magenta;
             Gizmos.DrawCube(nextdis, Vector3.one * 3);
         }
+
+        Gizmos.DrawLine(transform.position, player.position+Vector3.up);
     }
     private void OnDrawGizmos() {
         if (path.Count <= 0) return;

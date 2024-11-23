@@ -625,6 +625,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1601730977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1701796793
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +938,10 @@ PrefabInstance:
       propertyPath: m_Grid
       value: 
       objectReference: {fileID: 1701796794}
+    - target: {fileID: 2122032869146646339, guid: 1e15625ed7e2a9a43ad5180839b85be7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1601730977}
     - target: {fileID: 3978101556384355822, guid: 1e15625ed7e2a9a43ad5180839b85be7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24
@@ -987,14 +996,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2219510882239791605, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
-      propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2219510882239791605, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
-      propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2219510882239791605, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
       propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1701796795}
@@ -1014,22 +1015,6 @@ PrefabInstance:
       propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 150847356}
-    - target: {fileID: 2219510882239791605, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
-      propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2219510882239791605, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
-      propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: SpawnWarden
-      objectReference: {fileID: 0}
-    - target: {fileID: 2219510882239791605, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
-      propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: WanderController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2219510882239791605, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
-      propertyPath: MazeGenerated.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3754047786262623196, guid: 7f40f240e6c275d408e4cd6c35e13309, type: 3}
       propertyPath: m_Name
       value: SettingsHandler
