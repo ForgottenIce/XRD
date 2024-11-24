@@ -27,14 +27,14 @@ public class MazeSpawner : MonoBehaviour
                 }
             }
         }
-        const float mazePlaneScaleFactor = 3.3980582524271844660194174757282f; // Magic number, not 100% accurate. Need to calculate this properly somehow.
+        var mazePlaneScaleFactor = 0.3f * maze.Length - 0.2f;
         
         var mazePlaneFloor = Instantiate(mazePlane, Grid.gameObject.transform, false);
-        mazePlaneFloor.transform.localScale = new Vector3(maze.Length / mazePlaneScaleFactor, 1, maze[0].Length / mazePlaneScaleFactor);
+        mazePlaneFloor.transform.localScale = new Vector3(mazePlaneScaleFactor, 1, mazePlaneScaleFactor);
         mazePlaneFloor.transform.localPosition = Grid.CellToLocal(new Vector3Int(maze.Length/2, 0, maze[0].Length/2));
         
         var mazePlaneRoof = Instantiate(mazePlane, Grid.gameObject.transform, false);
-        mazePlaneRoof.transform.localScale = new Vector3(maze.Length / mazePlaneScaleFactor, -1, maze[0].Length / mazePlaneScaleFactor);
+        mazePlaneRoof.transform.localScale = new Vector3(mazePlaneScaleFactor, -1, mazePlaneScaleFactor);
         mazePlaneRoof.transform.localPosition = Grid.CellToLocal(new Vector3Int(maze.Length/2, 1, maze[0].Length/2));
     }
 
