@@ -26,7 +26,6 @@ public class HeartBeatPlayer : MonoBehaviour
     void Update()
     {
         var distanceToWarden = Vector3.Distance(transform.position, wardenTransform.position);
-        Debug.Log(distanceToWarden);
         if (!_isSoundPlaying && distanceToWarden < activationDistance)
         {
             _isSoundPlaying = true;
