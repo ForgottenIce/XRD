@@ -762,6 +762,7 @@ MonoBehaviour:
   Spawner: {fileID: 1563346064001053333, guid: ce874592d8d4fd645a7f546e45e84654, type: 3}
   cellDic: {fileID: 11400000, guid: 81653b6e0214fd3468c3f81d7450c7a9, type: 2}
   mazePlane: {fileID: 5345327469616797966, guid: 93e5cc77241510a429134a41d00f5e6d, type: 3}
+  endArea: {fileID: 56630761198554460, guid: dff56b89af9b9364e875d39a1ecde20b, type: 3}
   testpoint: {x: 0, y: 0, z: 0}
 --- !u!4 &1701796796
 Transform:

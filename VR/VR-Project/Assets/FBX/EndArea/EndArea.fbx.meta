@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: f73948ba6d6fc1347b1341f9870fc2c4
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: andesite
+    second: {fileID: 2100000, guid: adf278ec8b40fb44b969ba3340fd2cec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chiseled_deepslate
+    second: {fileID: 2100000, guid: 058466e81cd407e4d899045999b59cc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coal_ore
+    second: {fileID: 2100000, guid: d4715ff5c7566ad479da235512840004, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coarse_dirt
+    second: {fileID: 2100000, guid: 182e3b2ee90dcd84b8fc6cd5dc3d20bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cobblestone
+    second: {fileID: 2100000, guid: fb2ba3798c16043479c4fe2cb10570e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_oak_leaves
+    second: {fileID: 2100000, guid: 1c354094b849bbf4c84b4be2aa25926f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_oak_log
+    second: {fileID: 2100000, guid: 2d76fb7ead20935478a18e62db1c700f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_oak_log_top
+    second: {fileID: 2100000, guid: 327de9f87e0551e418ae55f5b1d0e476, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deepslate_bricks
+    second: {fileID: 2100000, guid: 07abf5d1b92e5494ab3447eb7bf2cbec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deepslate_tiles
+    second: {fileID: 2100000, guid: a0ec79da1d40e4c49ba5345720b57125, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirt
+    second: {fileID: 2100000, guid: 37517fdcaefe0ba4f95d3f878b1a3898, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirt_path_side
+    second: {fileID: 2100000, guid: 74fc8b6e399f6014aa284fcbd7e80483, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirt_path_top
+    second: {fileID: 2100000, guid: 5e86ebb2f3a903c4a98d15395c65f1c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass_block_side
+    second: {fileID: 2100000, guid: 39978c8e3d5537d43854f3bf9d8bbc0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass_block_top
+    second: {fileID: 2100000, guid: 9f7d67ca18bfb9f4a94ca5e6f6d7d7c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: iron_ore
+    second: {fileID: 2100000, guid: 2ee10694b73e60b4689793cc199fdafe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moss_block
+    second: {fileID: 2100000, guid: f2502d42429e2eb4ba2bed38ec07287a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mossy_cobblestone
+    second: {fileID: 2100000, guid: ae7f2973cbaf182458a2ca5512d4921e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oak_leaves
+    second: {fileID: 2100000, guid: a16bfa56229f65745ab354f639e9491c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oak_log
+    second: {fileID: 2100000, guid: 8b332f1972908e44786692ed779c4c4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oak_log_top
+    second: {fileID: 2100000, guid: f3912e3af897878429de236155c5d3b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polished_deepslate
+    second: {fileID: 2100000, guid: 47e187c235c8f6b45800df1795c7a62c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reinforced_deepslate_bottom
+    second: {fileID: 2100000, guid: 3b68d99ff669cc74c926742cb80fd966, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reinforced_deepslate_side
+    second: {fileID: 2100000, guid: 14d1785475b470742b76fab6e0562e1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reinforced_deepslate_top
+    second: {fileID: 2100000, guid: f248fe227df67194b970d52e1c27d6eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rooted_dirt
+    second: {fileID: 2100000, guid: f714afe66c489534db1313a986ddbe1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sculk
+    second: {fileID: 2100000, guid: 9913416921f9cbd4a9d02dd5722c5fa5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stone
+    second: {fileID: 2100000, guid: 951588c79c72815418a9ef2501a69681, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tuff
+    second: {fileID: 2100000, guid: 76c6f0c2306362e468177fc3c9398ae7, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: andesite
+    second: {fileID: 2800000, guid: 81c277bc6735df64fbafd15bda7d7199, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chiseled_deepslate
+    second: {fileID: 2800000, guid: 27115f5aca4aa9a4993a1ea073075300, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coal_ore
+    second: {fileID: 2800000, guid: 813369167b1c3664ab0cb77e1806518f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: coarse_dirt
+    second: {fileID: 2800000, guid: aecfae6fc604a084caea6bad4a6779a9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cobblestone
+    second: {fileID: 2800000, guid: c3ad691065cebe84c90290d5709862b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_oak_leaves_y
+    second: {fileID: 2800000, guid: a468abe84af23ba4f9fdd1df824b3a3f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_oak_log
+    second: {fileID: 2800000, guid: 9731eb78d3d38f2439a0578027b6c52b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_oak_log_top
+    second: {fileID: 2800000, guid: f738a46b8b6cff34a9a95bfc73dc83c2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: deepslate_bricks
+    second: {fileID: 2800000, guid: 86a65bbed0837e442a9346adf49a9257, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: deepslate_tiles
+    second: {fileID: 2800000, guid: 2da65f302a77b0847bd05b16f603845e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dirt
+    second: {fileID: 2800000, guid: 1cef219c900b2c4489679a9ba890944c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dirt_path_side
+    second: {fileID: 2800000, guid: 50791fee4812b8a41aa1493ce51e73d2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dirt_path_top
+    second: {fileID: 2800000, guid: 6b7745473f3b6dc42b697becc96a4078, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: grass_block_side_y
+    second: {fileID: 2800000, guid: 89a6f5db150cfd64da014bb4a8b72c48, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: grass_block_top_y
+    second: {fileID: 2800000, guid: eae54b04d8d8a6942a215b0d044f19aa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: iron_ore
+    second: {fileID: 2800000, guid: eddefe6120d8bdd4c884face004c5493, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: moss_block
+    second: {fileID: 2800000, guid: e44d50e9574eb8b45994386087671868, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: mossy_cobblestone
+    second: {fileID: 2800000, guid: cec1e40566c03214597f8f6d2612e65c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: oak_leaves_y
+    second: {fileID: 2800000, guid: 01492d2d7ad2e304b9c854077dad7436, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: oak_log
+    second: {fileID: 2800000, guid: 10f0077a07c5d1d4794a5bee46f87166, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: oak_log_top
+    second: {fileID: 2800000, guid: b3540fa38a8f67a4cb1e61b36dcb7bfa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: polished_deepslate
+    second: {fileID: 2800000, guid: 376dbd9d2f9dc8343b4a8018c06563f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: reinforced_deepslate_bottom
+    second: {fileID: 2800000, guid: ff961b554f4a6c242a149cf87a427b3d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: reinforced_deepslate_side
+    second: {fileID: 2800000, guid: 7ffacdc1f7d07db4f9f35a017334f550, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: reinforced_deepslate_top
+    second: {fileID: 2800000, guid: 5c942cdcc2e72d543ab1827bbe3ad659, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rooted_dirt
+    second: {fileID: 2800000, guid: 3eda3c72dbc4fba46a1f6f8a9040a27a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sculk
+    second: {fileID: 2800000, guid: 2c8f13ea263a48b4c8f576448a05c7ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stone
+    second: {fileID: 2800000, guid: 00f840867b8981249a0ee73fe96aa69b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tuff
+    second: {fileID: 2800000, guid: f9a602f08f8325f48bc488aa6b35821f, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

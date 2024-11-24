@@ -7,6 +7,7 @@ public class MazeSpawner : MonoBehaviour
     [SerializeField] private GameObject Spawner;
     [SerializeField] private MazeCellDic cellDic;
     [SerializeField] private GameObject mazePlane;
+    [SerializeField] private GameObject endArea;
     //public int[][] maze;
     [SerializeField] private Vector3 testpoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,6 +37,9 @@ public class MazeSpawner : MonoBehaviour
         var mazePlaneRoof = Instantiate(mazePlane, Grid.gameObject.transform, false);
         mazePlaneRoof.transform.localScale = new Vector3(mazePlaneScaleFactor, -1, mazePlaneScaleFactor);
         mazePlaneRoof.transform.localPosition = Grid.CellToLocal(new Vector3Int(maze.Length/2, 1, maze[0].Length/2));
+        
+        var endAreaObj = Instantiate(endArea, Grid.gameObject.transform, false);
+        endAreaObj.transform.localPosition = Grid.CellToLocal(new Vector3Int(maze.Length, 0, maze.Length));
     }
 
     void OldSpawnMaze() {
