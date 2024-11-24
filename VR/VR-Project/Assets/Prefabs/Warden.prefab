@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2122032869146646339}
   m_Layer: 2
   m_Name: Warden
-  m_TagString: Untagged
+  m_TagString: Warden
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   SoundEventEmitter: {fileID: 11400000, guid: 57448721200591b4f8aa817a82d19b28, type: 2}
   wardenAnimation: {fileID: 2440883947019626158}
   player: {fileID: 0}
-  detectionRadius: 10
+  detectionRadius: 15
   detectionMethod: 0
   GracePeriode: 0.5
   DetectionChangePercent: 0
