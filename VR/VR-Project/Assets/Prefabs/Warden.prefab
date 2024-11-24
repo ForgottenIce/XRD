@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3978101556384355822}
   - component: {fileID: 7038309941910370556}
   - component: {fileID: 2122032869146646339}
+  - component: {fileID: 4723305915990453649}
   m_Layer: 2
   m_Name: Warden
   m_TagString: Warden
@@ -74,12 +75,129 @@ MonoBehaviour:
   speed: 1
   turnSpeed: 1
   SoundEventEmitter: {fileID: 11400000, guid: 57448721200591b4f8aa817a82d19b28, type: 2}
+  screamAudioClip:
+  - {fileID: 8300000, guid: 2b9a3abd13276f442b04bc08ed1c6e2f, type: 3}
+  - {fileID: 8300000, guid: e271abd60cbd06c4da8fb1604ef8322e, type: 3}
+  - {fileID: 8300000, guid: adaad76e4bcb30a40931d754703cd893, type: 3}
+  - {fileID: 8300000, guid: 737d5def27e93784fbbb20db0c06f58a, type: 3}
+  seesPlayerClip:
+  - {fileID: 8300000, guid: 9ca9f57a6f672a64dbf01cf0a9f134bf, type: 3}
+  - {fileID: 8300000, guid: 2dde5b7c40223944eb101decc5b39acd, type: 3}
+  - {fileID: 8300000, guid: bc39df6860b037d40abe908b74a41552, type: 3}
+  - {fileID: 8300000, guid: 5f87b99e8f7375b418e07ba72274bba9, type: 3}
+  - {fileID: 8300000, guid: 3adb8b6abfc51ac4891d7c25afcfadf4, type: 3}
+  hearsSomethingClip:
+  - {fileID: 8300000, guid: e2291f848f054d544983dbd87cca2644, type: 3}
+  - {fileID: 8300000, guid: a3fd68967707d6e4395895e1d39f789f, type: 3}
+  - {fileID: 8300000, guid: 991e3beca3842e343a9773acecb9acea, type: 3}
+  - {fileID: 8300000, guid: 158204e82bff9c24191d52196ee4ad72, type: 3}
+  - {fileID: 8300000, guid: 08c2bfbe32f21fc4abbe66984e52c905, type: 3}
+  - {fileID: 8300000, guid: ec3f7788558ee2a4bb5c7706fe3a5b91, type: 3}
   wardenAnimation: {fileID: 2440883947019626158}
+  targetingWindow: 7
+  ChargeSpeed: 3
   player: {fileID: 0}
   detectionRadius: 15
   detectionMethod: 0
-  GracePeriode: 0.5
+  GracePeriode: 0.8
   DetectionChangePercent: 0
+--- !u!82 &4723305915990453649
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486794451801758170}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &4731111305553077557
 PrefabInstance:
   m_ObjectHideFlags: 0

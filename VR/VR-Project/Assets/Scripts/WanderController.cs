@@ -4,8 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using UnityEngine;
 
-public class WanderController : MonoBehaviour
-{
+public class WanderController : MonoBehaviour {
     [Header("Grid fields")]
     //[SerializeField] private MazeSpawner m_Spawner;
     [SerializeField] public int[][] maze { set; get; }
@@ -23,17 +22,23 @@ public class WanderController : MonoBehaviour
 
     [Header("Sound Fields")]
     [SerializeField] private SoundEventEmitter SoundEventEmitter;
-    
+    [SerializeField] private AudioClip[] screamAudioClip;
+    [SerializeField] private AudioClip[] seesPlayerClip;
+    [SerializeField] private AudioClip[] hearsSomethingClip;
+    private AudioSource _audioSource;
+
     [Header("Warden Model")]
     [SerializeField] private Animation wardenAnimation;
 
     [Header("Player Targeting")]
-    private bool ChargingPlayer = false;
+    [SerializeField] private int targetingWindow;
+    [SerializeField] private float ChargeSpeed;
     [SerializeField] private Transform player;
     [SerializeField] private float detectionRadius = 1;
     [SerializeField] private DetectionMethod detectionMethod;
     [SerializeField] private float GracePeriode;
     [SerializeField] private float DetectionChangePercent;
+    private bool ChargingPlayer = false;
 
     enum DetectionMethod {
         StillInRangeAfterTime,
@@ -43,11 +48,13 @@ public class WanderController : MonoBehaviour
     void Start()
     {
         SoundEventEmitter.OnSoundEvent += HandleSoundEvent;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void HandleSoundEvent(SoundEvent @event) {
         if (maze == null) { return; }
         StopCoroutine("SniffForTarget");
+        _audioSource.PlayOneShot(hearsSomethingClip[Random.Range(0, hearsSomethingClip.Length)]);
         ChangeAnimation("wardenrun.custom");
         WardenIsSniffing = false;
         speed = 2;
@@ -93,7 +100,7 @@ public class WanderController : MonoBehaviour
             StartCoroutine("SniffForTarget");
         }
 
-        if (!ChargingPlayer && ((player.position+Vector3.up)-transform.position).magnitude < detectionRadius) {
+        if (!WardenIsSniffing && !ChargingPlayer && ((player.position+Vector3.up)-transform.position).magnitude < detectionRadius) {
             StartCoroutine("ChargePlayer");
         }
         if ((nextdis - transform.position).magnitude < 0.5f 
@@ -165,11 +172,15 @@ public class WanderController : MonoBehaviour
 
     public IEnumerator SniffForTarget() {
         ChangeAnimation("wardenscream.custom");
-        yield return new WaitForSeconds(5);
+        _audioSource.PlayOneShot(screamAudioClip[Random.Range(0, screamAudioClip.Length)]);
+        yield return new WaitForSeconds(3);
         ChangeAnimation("wardenwalk.custom");
         WardenIsSniffing = false;
-        var x = Random.Range(0, maze.Length - 1);
-        var y = Random.Range(0, maze[0].Length - 1);
+        var gridSpace = m_Grid.WorldToCell(Vector3Int.RoundToInt(player.position) + Vector3Int.one);
+        //var x = Random.Range(0, maze.Length - 1);
+        var x = Random.Range(System.Math.Max(gridSpace.x - targetingWindow + 1, 0), System.Math.Min(gridSpace.x + targetingWindow, maze.Length-1));
+        //var y = Random.Range(0, maze[0].Length - 1);
+        var y = Random.Range(System.Math.Max(gridSpace.z - targetingWindow + 1, 0), System.Math.Min(gridSpace.z + targetingWindow, maze.Length-1));
         SetPath(x, y);
         speed = 1;
         turnSpeed = 1;
@@ -178,29 +189,31 @@ public class WanderController : MonoBehaviour
     private IEnumerator ChargePlayer() {
         if (!Physics.Linecast(transform.position, player.position + Vector3.up, out _, LayerMask.GetMask("Default"))) {
             if (detectionMethod == DetectionMethod.RandomChange && Random.value>DetectionChangePercent) {
+                _audioSource.PlayOneShot(seesPlayerClip[Random.Range(0, seesPlayerClip.Length)]);
                 ChargingPlayer = true;
                 var target = player.position;
                 target.y = 1;
                 nextdis = target;
                 ChangeAnimation("wardenrun.custom");
-                speed = 2;
-                turnSpeed = 2;
+                speed = ChargeSpeed;
+                turnSpeed = ChargeSpeed;
                 path.Clear();
             }
             else if (detectionMethod == DetectionMethod.StillInRangeAfterTime) {
                 yield return new WaitForSeconds(GracePeriode);
                 if (!Physics.Linecast(transform.position, player.position + Vector3.up, out _, LayerMask.GetMask("Default"))) {
+                    _audioSource.PlayOneShot(seesPlayerClip[Random.Range(0, seesPlayerClip.Length)]);
                     ChargingPlayer = true;
                     var target = player.position;
                     target.y = 1;
                     nextdis = target;
                     ChangeAnimation("wardenrun.custom");
-                    speed = 2;
-                    turnSpeed = 2;
+                    speed = ChargeSpeed;
+                    turnSpeed = ChargeSpeed;
                     path.Clear();
                 }
             }
-        } 
+        }
     }
 
     private void ChangeAnimation(string animationName)
