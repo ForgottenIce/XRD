@@ -221,6 +221,22 @@ public class WanderController : MonoBehaviour {
         wardenAnimation.Play(animationName);
     }
 
+    public void KillWarden() {
+        StopAllCoroutines();
+        StartCoroutine(DelayedDeath());
+    }
+
+    public IEnumerator DelayedDeath() {
+        ChangeAnimation("wardendespawn.new");
+        _audioSource.enabled = false;
+        WardenIsActive = false;
+        yield return new WaitForSeconds(2.05f);
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy() {
+        SoundEventEmitter.OnSoundEvent -= HandleSoundEvent;
+    }
     void OnDrawGizmosSelected() {
         var pos = m_Grid.WorldToCell(Vector3Int.RoundToInt(gameObject.transform.position)+Vector3Int.one);
         Gizmos.color = Color.cyan;

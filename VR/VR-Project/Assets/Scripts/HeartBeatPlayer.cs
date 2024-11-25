@@ -25,11 +25,12 @@ public class HeartBeatPlayer : MonoBehaviour
     
     void Update()
     {
-        var distanceToWarden = Vector3.Distance(transform.position, wardenTransform.position);
-        if (!_isSoundPlaying && distanceToWarden < activationDistance)
-        {
-            _isSoundPlaying = true;
-            StartCoroutine(PlayHeartBeatSound(distanceToWarden));
+        if (wardenTransform != null) {
+            var distanceToWarden = Vector3.Distance(transform.position, wardenTransform.position);
+            if (!_isSoundPlaying && distanceToWarden < activationDistance) {
+                _isSoundPlaying = true;
+                StartCoroutine(PlayHeartBeatSound(distanceToWarden));
+            }
         }
     }
     
