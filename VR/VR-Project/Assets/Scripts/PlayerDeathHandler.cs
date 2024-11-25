@@ -33,7 +33,7 @@ public class PlayerDeathHandler : MonoBehaviour
       if (wardenTransform == null) return;
       
       var distanceToWarden = Vector3.Distance(transform.position, wardenTransform.position);
-      if (!_isDead && distanceToWarden < deathRadius)
+      if (!_isDead && distanceToWarden < deathRadius && !Physics.Linecast(transform.position + Vector3.up, wardenTransform.position, out _, LayerMask.GetMask("Default")))
       {
          _audioSource.PlayOneShot(deathSound);
          locomotionGameObject.SetActive(false);
