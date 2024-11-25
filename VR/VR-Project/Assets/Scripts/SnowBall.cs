@@ -6,23 +6,23 @@ public class SnowBall : MonoBehaviour
     
     [SerializeField] private SoundEventEmitter soundEventEmitter;
     
-    private bool isAlive = true;
-   
     private void OnCollisionEnter(Collision other)
     {
-        if (isAlive)
+        if (other.gameObject.layer == LayerMask.NameToLayer("Default"))
         {
             soundEventEmitter.EmitSoundEvent(new SoundEvent(transform.position));
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
-            gameObject.GetComponent<AudioSource>().Play();
-            isAlive = false;
-            StartCoroutine(DelayedDestroy());
+            Destroy(gameObject);
         }
     }
-    
-    private IEnumerator DelayedDestroy()
+
+    public void StartDespawnTimer()
     {
-        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(DelayedDespawn());
+    }
+
+    IEnumerator DelayedDespawn()
+    {
+        yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }
 }
