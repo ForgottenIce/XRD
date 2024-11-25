@@ -3355,13 +3355,13 @@
             ]
         },
         {
-            "name": "XR Both Hands",
-            "id": "ca186931-5d0e-476d-a7f2-04f4787d97c1",
+            "name": "XRI Both",
+            "id": "836a7bca-ef88-400a-ab83-f20cbc561246",
             "actions": [
                 {
                     "name": "RestartGame",
                     "type": "Button",
-                    "id": "95e0a897-cf14-4770-ad6a-65630d4602b8",
+                    "id": "6b68317c-88fe-44ab-9e56-f936a451f764",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -3371,7 +3371,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "61002e05-e33e-46f6-929b-137b22d505e5",
+                    "id": "bfb377ba-72f9-4b9c-ac1f-3567f7c50bc5",
                     "path": "<XRController>{LeftHand}/{GripButton}",
                     "interactions": "",
                     "processors": "",
@@ -3382,7 +3382,7 @@
                 },
                 {
                     "name": "",
-                    "id": "bbeed6a1-e465-4a7e-b6d8-0004711ddaeb",
+                    "id": "f36da9da-1bd4-4e89-b0bc-5c89fdb708a6",
                     "path": "<XRController>{LeftHand}/{TriggerButton}",
                     "interactions": "",
                     "processors": "",
@@ -3393,7 +3393,7 @@
                 },
                 {
                     "name": "",
-                    "id": "7d745164-6162-46cc-940e-5d8aa17c8a36",
+                    "id": "66d34962-5f17-422d-b610-d992aa3ed5ab",
                     "path": "<XRController>{RightHand}/{GripButton}",
                     "interactions": "",
                     "processors": "",
@@ -3404,7 +3404,7 @@
                 },
                 {
                     "name": "",
-                    "id": "076fd473-9a54-4058-9d5a-c2cfb3768eee",
+                    "id": "d5b88dbf-21a4-4a5f-8647-ed2deb9e5924",
                     "path": "<XRController>{RightHand}/{TriggerButton}",
                     "interactions": "",
                     "processors": "",

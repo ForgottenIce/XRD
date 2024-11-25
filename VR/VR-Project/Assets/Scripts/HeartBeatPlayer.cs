@@ -46,4 +46,9 @@ public class HeartBeatPlayer : MonoBehaviour
         yield return new WaitForSeconds(secondsToWait);
         _isSoundPlaying = false;
     }
+
+    public void StopHeartBeats()
+    {
+        _audioSource.enabled = false;
+    }
 }

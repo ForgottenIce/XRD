@@ -10,7 +10,7 @@ public class WinHandler : MonoBehaviour
     private bool HasWon = false;
 
     private void Start() {
-        _resetButton = InputSystem.ListEnabledActions().Find(a => a.name == "SpawnSnowBallLeft");
+        _resetButton = InputSystem.ListEnabledActions().Find(a => a.name == "RestartGame");
     }
 
     private void Update() {
@@ -20,7 +20,6 @@ public class WinHandler : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider collider) {
-        Debug.Log("test");
         if (collider.gameObject.CompareTag("Finish")) {
             HasWon = true;
             PlayerWon.Invoke();
