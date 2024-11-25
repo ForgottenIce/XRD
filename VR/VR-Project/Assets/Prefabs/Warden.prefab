@@ -99,7 +99,7 @@ MonoBehaviour:
   player: {fileID: 0}
   detectionRadius: 15
   detectionMethod: 0
-  GracePeriode: 0.8
+  GracePeriode: 1.5
   DetectionChangePercent: 0
 --- !u!82 &4723305915990453649
 AudioSource:
@@ -110,7 +110,7 @@ AudioSource:
   m_GameObject: {fileID: 1486794451801758170}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 26bddcf92cc431745b800786860ca2ab, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0

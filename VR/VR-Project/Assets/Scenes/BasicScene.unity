@@ -425,15 +425,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d8a974e446f45434ebfb3c66cf1e95ec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 700
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8a974e446f45434ebfb3c66cf1e95ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 700
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8a974e446f45434ebfb3c66cf1e95ec, type: 3}
       propertyPath: m_LocalScale.z
-      value: 700
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8a974e446f45434ebfb3c66cf1e95ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1047,14 +1047,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1601730977}
-    - target: {fileID: 2122032869146646339, guid: 1e15625ed7e2a9a43ad5180839b85be7, type: 3}
-      propertyPath: GracePeriode
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2122032869146646339, guid: 1e15625ed7e2a9a43ad5180839b85be7, type: 3}
-      propertyPath: detectionRadius
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 3978101556384355822, guid: 1e15625ed7e2a9a43ad5180839b85be7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24
