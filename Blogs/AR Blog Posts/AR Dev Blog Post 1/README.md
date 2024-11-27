@@ -33,7 +33,7 @@ In our AR project, the idea of overlaying a 3D model of the parking lot into the
 
 When the user opens the app and points their phone's camera at the "Scanningpoint", the 3D model will align with the real parking lot. The overlay will help the user orient themselves in real time, as the virtual path to their car can be dynamically displayed. This approach reduces the complexity of playing lot navigation by visually guiding the user with augmented arrows or markers pointing towards their car, creating an interactive map that blends with reality.
 
-## Creating a 3D Model of the VIA Parking Lot
+## Creating a 3D Scans of the VIA Parking Lot
 The focus of our first lab week was to get started on creating a 3D model of the VIA parking lot.
 We thought a combination of using images from Google Maps and scanning the parking lot with a 3D scanner app would be a good approach.
 Getting the Google maps images didn't take too long.
