@@ -3,7 +3,15 @@
 
 ## Instantiating the maze in Unity
 
+With the Meta maze that was described in previous blog post, methods for actually instantiating the maze in unity, can be created. The method we use for this is to define a grid using the `Grid` component, and then place prefabs following to maze data. This same script will then also ensure the size of the floor and the placement of the completion area.
 
+![Maze Spawn](./media/MazeSpawner.png)
+
+In the above image a field called "Cell Dic" can be seen. This field is a reference to a `ScriptableObject` that holds a dictionary prefabs keyed on their "Meta identifier," corresponding to a type of Maze cell as categorized in the "Meta Maze." The dictionary is only responsible for cell types, cell orientation is specified separately in the "Meta Maze."
+
+![Grid dictionary](./media/GridDictionary.PNG)
+
+The dictionary seen in this image shows 6 wall types, but we had ideas to potential create alternate walls of each types, and maybe have several different path cell types as well.
 
 ## Warden AI
 
