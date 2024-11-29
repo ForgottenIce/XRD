@@ -26,7 +26,7 @@ The process of how we created the 3D model is described further in [AR Dev Blog 
 While working on creating the 3D model on the side, we also worked on creating our AR application.
 
 Our AR application is made in Unity with AR Foundation. The program makes use of various managers and some scripts. 
-We wanted to be able to look at a sign and then spawn the parking spot anchored on that sign, for this we make use of a `ARTrackedImageManager` to scan the sign.
+We wanted to be able to look at a parking sign on the parking lot, and then spawn the 3D model of the parking lot anchored on that sign. For this we make use of a `ARTrackedImageManager` to scan the sign.
 We define a list of images that contain a image of the sign. We can then scan the sign and have a listener do something once the sign is found.
 
 ![Reference Image Library](./media/ReferenceImageLibrary.PNG)
@@ -90,7 +90,7 @@ public class ParkingSpaceFinder : MonoBehaviour
 }
 ```
 
-The script looks at a input field and once that changes the a marker object is placed at the position of the parking spot, as specified in a vector3 array. The marker is hidden if no parking space is input.
+The script looks at a input field and once that changes, a marker object is placed at the position of the parking spot, as specified in a vector3 array. The marker is hidden if no parking space is input.
 
 ```cs
 public class packingSpacePointerController : MonoBehaviour

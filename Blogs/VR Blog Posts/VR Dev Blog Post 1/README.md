@@ -24,7 +24,7 @@ Other then this, speed was thought about, but will likely matter very little, fo
 
 Through these criteria, maybe a few others, and a gut feeling we picked "Wilson's algorithm". Funnily this algorithm can generate some called a "Uniform Spanning tree," which more or less means that it is equally likely for it to generate any maze one could think up.
 
-### Maze meta data
+### Maze Meta Data
 
 Our maze generation algorithm leaves us with a with a boolean wall or no wall maze. We would like to have information about the how walls or paths interact with each other. You might be able to generate this data while constructing the maze, but an easier method is to just scan the entire maze afterwards.
 

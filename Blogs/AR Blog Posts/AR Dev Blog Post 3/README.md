@@ -24,7 +24,7 @@ The last thing needed on the 3D model was the calibration sign that the Unity ap
 
 And with that, our 3D model was finished. The model was imported into Unity to finish up our AR application.
 
-## Aligning and utilizing the model
+## Aligning and Utilizing the 3D Model
 
 With the 3D model fully finished a few newer problems were created, mainly alignment with the world and pointing to a specific space.
 
@@ -44,3 +44,33 @@ The model also creates new potentially better ways of defining the locations of 
 
 Here a script finds the center of the bounds of 2 lines, and then gets the average position between them. Another method takes care to ensure that the 2 lines of a space, is actually side by side, and that 2 lines in different strips are picked for some reason. 
 This spot is then what is used for pointing to the place where the user parked their car.
+
+## Pointing an Arrow Towards the Parking Spot
+The last bit of logic needed for the AR application to be finished is an arrow that can point the user of the app towards the parking spot where their car is parked.
+Two 3D arrows were created for this purpose.
+
+The first arrow is a **blue arrow** that is supposed to float on top of the chosen parking spot.
+The second arrow is a **green arrow** that is always visible on the screen that points the user towards the parking spot.
+
+A simple script is used to make the green arrow appear and point in the correct direction once a parking spot has been chosen:
+
+```cs
+void Update()
+{
+    if (parkingArea != null && parkingArea.activeSelf) {
+        pointer.SetActive(true);
+        pointer.transform.LookAt(parkingArea.transform.position);
+    } else {
+        pointer.SetActive(false);
+    }
+}
+```
+
+Below a gif illustrates what this looks like in the Unity Engine. The green arrow is pointing towards the chosen parking spot. The blue arrow floats on top of the chosen parking spot:
+
+![Demonstration of arrows in 3D](media/parking-lot-arrows.gif)
+
+## The Finished Result
+With that, our AR application was finished. Now to the interesting part. How does this actually look in real life?
+
+We created a video demonstration of the application in action. [The video can be found here.]()

@@ -17,7 +17,7 @@ To bring our AR parking assistant to life, we plan to leverage a combination of 
 We will use **Unity**, a widely-used game engine for creating 3D and AR applications. Unity offers built-in support for AR and provides tools for manipulation 3D models, applying textures, and rendering in real-time.
 
 **2. AR Foundation:**
-For augmented reality featues, we'll use **AR Foundation**, Unity's framework for developing AR apps across **ARKit** (iOS) and **ARCore** (Android). AR Foundation will allow us to access device cameras, detect surfaces, and overlay virtual objects in the real-world enviorment.
+For augmented reality features, we'll use **AR Foundation**, Unity's framework for developing AR apps across **ARKit** (iOS) and **ARCore** (Android). AR Foundation will allow us to access device cameras, detect surfaces, and overlay virtual objects in the real-world enviorment.
 
 **3. 3D Model of the Parking Lot:**
 A critical component of the app is a **3D model of the VIA parking lot**. This model, created using **Blender**, will be scaled and imported into Unity to serve as the app's virtual environment. The 3D model well help users identify the layout and spot their car.
@@ -31,9 +31,9 @@ We will conduct **testing** throughout development on Android, ensuring the app 
 In our AR project, the idea of overlaying a 3D model of the parking lot into the real world serves as the foundation for providing a seamless and intuitive user experience. By integrating a virtual 3D model of the VIA parking lot into the real-world environment through augmented reality, users can visualize the parking layout directly on their device. The digital overlay will enhance awareness and make it easier for users to navigate.
 
 
-When the user opens the app and points their phone's camera at the "Scanningpoint", the 3D model will align with the real parking lot. The overlay will help the user orient themselves in real time, as the virtual path to their car can be dynamically displayed. This approach reduces the complexity of playing lot navigation by visually guiding the user with augmented arrows or markers pointing towards their car, creating an interactive map that blends with reality.
+When the user opens the app and points their phone's camera at the calibration point, the 3D model will align with the real parking lot. The overlay will help the user orient themselves in real time, as the virtual path to their car can be dynamically displayed. This approach reduces the complexity of playing lot navigation by visually guiding the user with augmented arrows or markers pointing towards their car, creating an interactive map that blends with reality.
 
-## Creating a 3D Scans of the VIA Parking Lot
+## Creating 3D Scans of the VIA Parking Lot
 The focus of our first lab week was to get started on creating a 3D model of the VIA parking lot.
 We thought a combination of using images from Google Maps and scanning the parking lot with a 3D scanner app would be a good approach.
 Getting the Google maps images didn't take too long.
