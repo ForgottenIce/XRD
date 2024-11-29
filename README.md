@@ -26,8 +26,8 @@ Here is a list of the blog posts written throughout the course:
 
 **VR development blog posts:**
 1. [VR Dev Blog Post 1](Blogs/VR%20Blog%20Posts/VR%20Dev%20Blog%20Post%201/README.md)
-2. [VR Dev Blog Post 1](Blogs/VR%20Blog%20Posts/VR%20Dev%20Blog%20Post%202/README.md)
-3. [VR Dev Blog Post 1](Blogs/VR%20Blog%20Posts/VR%20Dev%20Blog%20Post%203/README.md)
+2. [VR Dev Blog Post 2](Blogs/VR%20Blog%20Posts/VR%20Dev%20Blog%20Post%202/README.md)
+3. [VR Dev Blog Post 3](Blogs/VR%20Blog%20Posts/VR%20Dev%20Blog%20Post%203/README.md)
 
 **Individual reflections:**
 1. [Anders' Individual Reflections](Blogs/Individual%20Reflections/Anders/README.md)
