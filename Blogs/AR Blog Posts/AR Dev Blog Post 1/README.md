@@ -3,7 +3,7 @@
 
 Welcome to our first XR dev blog post. This blog post covers the beginning of our AR project and the work we've done in the first lab week. Let's get started!
 
-## The Idea: Find Your Car AR Mobile Application
+## The Idea: Parking Finder AR Mobile Application
 Our group came up with the idea of creating an AR mobile application that can help you find your car in the parking lot.
 When a user of the app has parked their car, they type in the number of the parking spot in the app and leave.
 When they come back to the parking lot later, they can bring out their phone and point the camera around the parking lot.
