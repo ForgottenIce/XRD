@@ -13,7 +13,7 @@ We created two XR projects throughout the course:
 1. For our **AR** project, we created a parking finder app that overlays a 3D model of the VIA parking lot into the real world.
 2. For our **VR** project, we created a Minecraft inspired game where the Warden creature from Minecraft hunts you down in a randomly generated maze.
 
-## Blog posts
+## Blog Posts
 Here is a list of the blog posts written throughout the course:
 
 **Introduction:**
@@ -34,10 +34,23 @@ Here is a list of the blog posts written throughout the course:
 2. [Sebastian's Personal Reflections]()
 3. [Simon's Personal Reflections]()
 
-## Video demonstrations
+## Video Demonstrations
 A video demonstration of our AR and VR projects can be found below.
+- [YouTube: AR Parking Finder Demonstration](https://youtu.be/V5ZpZy0vI-Y)
+- [YouTube: Warden Maze Demonstration](https://youtu.be/rRTMI75DmDo)
 
-## Source code
+## External Sources
+Here is a list of external resources used in our projects:
+
+**AR:**
+- [VIA Parking Lot Measurements (provided by "kort- og landmålingsuddannelsen")](./Blogs/AR%20Blog%20Posts/AR%20Dev%20Blog%20Post%202/media/P-Plads.pdf)
+
+**VR:**
+- [Various game assets (Minecraft)](https://www.minecraft.net/)
+- [Faithful resource pack (faithfulpack.net)](https://faithfulpack.net/)
+- [Warden 3D model (sketchfab.com)](https://sketchfab.com/3d-models/warden-minecraft-animation-recreations-25a0311564e044f898cd5f1f05e7798c)
+
+## Source Code
 The source code for our two projects are linked below:
 - [AR Unity Project Source Code](AR/AR-Project/)
 - [AR Blender Files](AR/Blender/)

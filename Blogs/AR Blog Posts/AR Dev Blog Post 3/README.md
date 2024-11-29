@@ -46,25 +46,13 @@ Here a script finds the center of the bounds of 2 lines, and then gets the avera
 This spot is then what is used for pointing to the place where the user parked their car.
 
 ## Pointing an Arrow Towards the Parking Spot
-The last bit of logic needed for the AR application to be finished is an arrow that can point the user of the app towards the parking spot where their car is parked.
+The last thing needed for the AR application to be finished is an arrow that can point the user of the app towards the parking spot where their car is parked.
 Two 3D arrows were created for this purpose.
 
 The first arrow is a **blue arrow** that is supposed to float on top of the chosen parking spot.
 The second arrow is a **green arrow** that is always visible on the screen that points the user towards the parking spot.
 
-A simple script is used to make the green arrow appear and point in the correct direction once a parking spot has been chosen:
-
-```cs
-void Update()
-{
-    if (parkingArea != null && parkingArea.activeSelf) {
-        pointer.SetActive(true);
-        pointer.transform.LookAt(parkingArea.transform.position);
-    } else {
-        pointer.SetActive(false);
-    }
-}
-```
+With some adjustments to the scripts described in [AR Dev Blog Post 2](../AR%20Dev%20Blog%20Post%202/README.md) (`ParkingSpaceFinder` and `packingSpacePointerController`), the two arrows correctly points to the desired position. 
 
 Below a gif illustrates what this looks like in the Unity Engine. The green arrow is pointing towards the chosen parking spot. The blue arrow floats on top of the chosen parking spot:
 
@@ -73,4 +61,4 @@ Below a gif illustrates what this looks like in the Unity Engine. The green arro
 ## The Finished Result
 With that, our AR application was finished. Now to the interesting part. How does this actually look in real life?
 
-We created a video demonstration of the application in action. [The video can be found here.]()
+We created a video demonstration of the application in action. [The video can be found here.](https://youtu.be/V5ZpZy0vI-Y)

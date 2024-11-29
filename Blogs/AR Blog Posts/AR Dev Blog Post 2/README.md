@@ -56,7 +56,7 @@ public class ParkingAreaSpawner : MonoBehaviour
 
 When the script is triggered by the event firing, it instantiates a prefab and sets its parent as the object added from the manager.
 
-Once the representation of the parking lot is spawn we want to be able to show the location of specific parking spots. For this we had 2 ideas of how we wanted to do this. We wanted to have at least 1 object spawn at the spot, and we wanted another object to points towards the spot.
+Once the representation of the parking lot is spawn we want to be able to show the location of specific parking spots. For this we had 2 ideas of how we wanted to do this. We wanted to have at least 1 object spawn at the spot, and we wanted another object to point towards the spot.
 
 ```cs
 public class ParkingSpaceFinder : MonoBehaviour

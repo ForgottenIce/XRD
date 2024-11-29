@@ -60,4 +60,4 @@ We've created a lobby inspired by Minecraft's **Ancient City**, that serves as t
 ![Lobby and ending area](./media/lobby-and-ending-area.png)
 
 ## The Finished Result
-That's all we were able to cover in these blog posts. To see the game in action, [check out this video demonstration.]()
+That's all we were able to cover in these blog posts. To see the game in action, [check out this video demonstration.](https://youtu.be/rRTMI75DmDo)
