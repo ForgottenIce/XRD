@@ -1,4 +1,4 @@
-# Anders' Personal Reflections
+# Anders' Individual Reflections
 
 ## Contributions
 

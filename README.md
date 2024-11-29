@@ -29,10 +29,10 @@ Here is a list of the blog posts written throughout the course:
 2. [VR Dev Blog Post 1](Blogs/VR%20Blog%20Posts/VR%20Dev%20Blog%20Post%202/README.md)
 3. [VR Dev Blog Post 1](Blogs/VR%20Blog%20Posts/VR%20Dev%20Blog%20Post%203/README.md)
 
-**Personal Reflections:**
-1. [Anders' Personal Reflections](Blogs/Individual%20Reflections/Anders/README.md)
-2. [Sebastian's Personal Reflections](Blogs/Individual%20Reflections/Sebastian/README.md)
-3. [Simon's Personal Reflections](Blogs/Individual%20Reflections/Simon/README.md)
+**Individual reflections:**
+1. [Anders' Individual Reflections](Blogs/Individual%20Reflections/Anders/README.md)
+2. [Sebastian's Individual Reflections](Blogs/Individual%20Reflections/Sebastian/README.md)
+3. [Simon's Individual Reflections](Blogs/Individual%20Reflections/Simon/README.md)
 
 ## Video Demonstrations
 A video demonstration of our AR and VR projects can be found below.
