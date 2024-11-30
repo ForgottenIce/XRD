@@ -49,6 +49,7 @@ Here is a list of external resources used in our projects:
 - [Various game assets (Minecraft)](https://www.minecraft.net/)
 - [Faithful resource pack (faithfulpack.net)](https://faithfulpack.net/)
 - [Warden 3D model (sketchfab.com)](https://sketchfab.com/3d-models/warden-minecraft-animation-recreations-25a0311564e044f898cd5f1f05e7798c)
+- [Wilson maze algorithm implementation (professor-l/GitHub)](https://github.com/professor-l/mazes/blob/master/scripts/wilsons.js)
 
 ## Source Code
 The source code for our two projects are linked below:
